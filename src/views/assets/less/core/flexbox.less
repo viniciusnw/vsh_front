@@ -1,0 +1,72 @@
+// ------------------------------------------------------------------------------
+//
+//  # Core - Flexbox
+//
+//  Version: 1.0
+//  Homepage: http://getbootstrap.com/
+//  Latest update: 15 Ago, 2016
+//
+// ------------------------------------------------------------------------------
+
+
+// Capacita um container a se comportar com flexbox na horizontal.
+.flexbox {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+// Capacita um container a se comportar como flex na vertical.
+.flexbox-inline {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+// Capacita um container com flexbox a crescer dinamicamente num outro container flexbox.
+.flexbox-grow {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+}
+
+// Capacita um container com flexbox a não crescer dinamicamente num outro container flexbox.
+.flexbox-grow-none {
+  -ms-flex-positive: 0;
+      flex-grow: 0;
+}
+
+// Coloca um elemento com flexbox a ficar no final do container com flexbox.
+.flexbox-end {
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+}
+
+// Centraliza os elementos verticalmente dentro de um container com flexbox.
+.flexbox-center {
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+// Centraliza os elementos horizontalmente dentro de um container com flexbox.
+.flexbox-align-center {
+  -ms-flex-align: center;
+      -ms-grid-row-align: center;
+      align-items: center;
+}
+
+// Alinha os elementos horizontalmente no topo do container com flexbox
+.flexbox-align-top {
+  -ms-flex-align: start;
+      -ms-grid-row-align: start;
+      align-items: start;
+}
+
+// Distribui os elementos de um container com flexbox para que tenham o mesmo espaçamento.
+.flexbox-space {
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+// Capacita um container com flexbox a quebra de linha entre os elementos.
+.flexbox-wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}

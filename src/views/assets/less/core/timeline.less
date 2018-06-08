@@ -1,0 +1,108 @@
+// ------------------------------------------------------------------------------
+//
+//  # Core - Timeline
+//
+//  Version: 1.0
+//  Homepage: *
+//  Latest update: 28 Jul, 2016
+//
+// ------------------------------------------------------------------------------
+
+
+.timeline {
+	.flexbox;
+	.flexbox-center;
+	.flexbox-space;
+
+	.block {
+		width: 100%;
+		text-align: center;
+
+		.btn-circle {
+			position: relative;
+			margin: 0 auto;
+		}
+
+		.top-line {
+			display: block;
+			position: relative;
+			margin: 0 auto;
+			width: 4px;
+			height: 30px;
+			background: @brand-gray;
+		}
+
+		.bot-line {
+			display: block;
+			position: relative;
+			margin: 0 auto;
+			width: 100%;
+			height: 4px;
+			background: @brand-gray;
+		}
+
+		.title {
+			color: @brand-gray;
+			font-size: @font-size-small;
+			text-transform: uppercase;
+			font-weight: 700;
+			margin-top: 14px;
+		}
+
+		.subtitle {
+			font-size: @font-size-small - 1;
+			color: @gray-light;
+		}
+	}
+}
+
+// Blocks
+
+.block {
+	&.block-default {
+		.btn-circle { .circle-default; }
+		.top-line, .bot-line { background: @color-purple; }
+	}
+	&.block-primary {
+		.btn-circle { .circle-primary; }
+		.top-line, .bot-line { background: @brand-primary; }
+	}
+	&.block-success, &.block-green {
+		.btn-circle { .circle-success; }
+		.top-line, .bot-line { background: @brand-success; }
+	}
+	&.block-danger, &.block-red {
+		.btn-circle { .circle-danger; }
+		.top-line, .bot-line { background: @brand-danger; }
+	}
+	&.block-warning, &.block-orange {
+		.btn-circle { .circle-warning; }
+		.top-line, .bot-line { background: @brand-warning; }
+	}
+	&.block-purple {
+		.btn-circle { .circle-purple; }
+		.top-line, .bot-line { background: @color-purple; }
+	}
+	&.block-pink {
+		.btn-circle { .circle-pink; }
+		.top-line, .bot-line { background: @color-pink; }
+	}
+	&.block-cyan {
+		.btn-circle { .circle-cyan; }
+		.top-line, .bot-line { background: @color-cyan; }
+	}
+	&.block-blue, &.block-info {
+		.btn-circle { .circle-blue; }
+		.top-line, .bot-line { background: @color-blue; }
+	}
+	&.block-gray {
+		.btn-circle { .circle-gray; }
+		.top-line, .bot-line { background: @brand-gray; }
+	}
+	&.block-off {
+		opacity: .6;
+		.btn-circle { .circle-off; }
+		.top-line, .bot-line { background: @gray-light; }
+		.title { color: @gray-light; }
+	}
+}

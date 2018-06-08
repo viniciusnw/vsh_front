@@ -1,0 +1,32 @@
+// ------------------------------------------------------------------------------
+//
+//  # Bootstrap - Breadcrumbs
+//
+//  Version: 3.3.7
+//  Homepage: http://getbootstrap.com/
+//  Latest update: 06 Ago, 2016
+//
+// ------------------------------------------------------------------------------
+
+
+.breadcrumb {
+  padding: @breadcrumb-padding;
+  margin-bottom: @line-height-computed;
+  list-style: none;
+  background-color: @breadcrumb-bg;
+  border-radius: @border-radius-small;
+
+  > li {
+    display: inline-block;
+
+    + li:before {
+      content: "@{breadcrumb-separator}\00a0"; // Unicode space added since inline-block means non-collapsing white-space
+      padding: 0 8px;
+      color: @breadcrumb-color;
+    }
+  }
+
+  > .active {
+    color: @breadcrumb-active-color;
+  }
+}

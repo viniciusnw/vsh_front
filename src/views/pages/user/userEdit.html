@@ -1,0 +1,117 @@
+<div class="modal full-modal" id="modal-account" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button type="button" class="close close-modal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-offset-3 col-sm-6 col-md-offset-4 col-md-4 col-lg-offset-4 col-lg-4">
+                            <ul class="nav nav-pills nav-justified">
+                                <li ng-class="{'active': userProfileTab == 0 }">
+                                    <a href="" ng-click="userProfileTab = 0" aria-controls="account_data" role="tab" data-toggle="tab">Meus dados</a>
+                                </li>
+                                <li ng-class="{'active': userProfileTab == 1 }">
+                                    <a href="" ng-click="userProfileTab = 1"  aria-controls="account_password" role="tab" data-toggle="tab">Alterar senha</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane nav-form" id="account_data" ng-class="{'active': userProfileTab == 0 }">
+                                    <form inputs-flow-up id="form_change_infos_user" action="">
+                                        <div class="form-group flow-up">
+                                            <label for="account_name">Nome</label>
+                                            <input type="name" class="form-control" id="account_name" placeholder="">
+                                        </div>
+                                        <div class="form-group flow-up">
+                                            <label for="account_email">E-mail</label>
+                                            <input type="email" class="form-control" id="account_email" placeholder="">
+                                        </div>
+                                        <div class="form-group flow-up">
+                                            <label for="account_phone">Telefone</label>
+                                            <input type="text" class="form-control" id="account_phone" placeholder="">
+                                        </div>
+                                        <div class="form-group flow-up">
+                                            <label for="account_job">Profissão</label>
+                                            <input type="text" class="form-control" id="account_job" placeholder="">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary btn-block">Alterar Dados</button>
+                                    </form>
+                                </div>
+                                <div role="tabpanel" class="tab-pane nav-form" id="account_passsword" ng-class="{'active': userProfileTab == 1 }">
+                                    <form inputs-flow-up id="form_change_password" action="">
+                                        <div class="form-group flow-up">
+                                            <label for="account_pw_old">Senha antiga</label>
+                                            <input type="password" class="form-control" id="account_pw_old" placeholder="">
+                                        </div>
+                                        <div class="form-group flow-up">
+                                            <label for="account_pw_new">Nova senha</label>
+                                            <input type="password" class="form-control" id="account_pw_new" placeholder="">
+                                        </div>
+                                        <div class="form-group flow-up">
+                                            <label for="account_pw_repeat">Repita a nova senha</label>
+                                            <input type="password" class="form-control" id="account_pw_repeat" placeholder="">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary btn-block">Alterar Senha</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	
+
+<!--<vsh-alerts alert="alert"></vsh-alerts>
+
+<form ng-submit="userEdit.userEdit()">
+
+    <input value="{{userEdit.id}}" placeholder="Id"type="text" disabled>
+    <br>
+
+    <input ng-model="userEdit.name" placeholder="Nome" type="text">
+    <br>
+
+    <input ng-model="userEdit.email" placeholder="E-mail" type="text">
+    <br>
+
+    <input ng-model="userEdit.phone" placeholder="Telefone" type="text">
+    <br>
+
+    <input ng-model="userEdit.occupation" placeholder="Profissão" type="text">
+    <br>
+
+    <div upload-image></div>
+    <br>
+
+    <img width='300' heigth='300' ng-hide="urlNewAvatar" ng-src="{{userEdit.avatar}}">
+    <br>
+
+    <button>Salvar</button>
+</form>
+
+<hr />
+
+<h3> Senha </h3>
+
+<form ng-submit="userEdit.userPassEdit()">
+
+    <input value="" ng-model="userEdit.old_pass" placeholder="Senha atual" type="text">
+    <br>
+
+    <input value="" ng-model="userEdit.pass" placeholder="Nova senha" type="text">
+    <br>
+
+    <input value="" ng-model="userEdit.pass_confirm" placeholder="Confirmação nova Senha" type="text">
+    <br>
+
+    <button> Trocar Senha</button>
+</form>-->

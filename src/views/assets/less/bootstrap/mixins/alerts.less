@@ -1,0 +1,25 @@
+// ------------------------------------------------------------------------------
+//
+//  # Bootstrap - Mixins - Alerts
+//
+//  Version: 3.3.7
+//  Homepage: http://getbootstrap.com/
+//  Latest update: 14 Ago, 2016
+//
+// ------------------------------------------------------------------------------
+
+
+// Alerts
+
+.alert-variant(@background; @border; @text-color) {
+  background-color: @background;
+  border-color: @border;
+  color: @text-color;
+
+  hr {
+    border-top-color: darken(@border, 5%);
+  }
+  .alert-link {
+    color: @alert-default-color;
+  }
+}

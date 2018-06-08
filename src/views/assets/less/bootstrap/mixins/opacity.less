@@ -1,0 +1,19 @@
+// ------------------------------------------------------------------------------
+//
+//  # Bootstrap - Opacity - Mixins
+//
+//  Version: 3.3.7
+//  Homepage: http://getbootstrap.com/
+//  Latest update: 14 Ago, 2016
+//
+// ------------------------------------------------------------------------------
+
+
+// Opacity
+
+.opacity(@opacity) {
+  opacity: @opacity;
+  // IE8 filter
+  @opacity-ie: (@opacity * 100);
+  filter: ~"alpha(opacity=@{opacity-ie})";
+}

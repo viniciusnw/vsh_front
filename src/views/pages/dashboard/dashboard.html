@@ -1,0 +1,222 @@
+<!--<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            
+            <h1>User</h1>
+
+            <div class="repeat-container-slide">
+                
+                <p animate-model-change model="{{events.user.password}}"> 
+                    {{events.user.password}}   
+                </p>
+                
+                <p animate-model-change model="{{events.user.email}}">
+                    {{events.user.email}}    
+                </p>
+                
+                <p animate-model-change model="{{events.user.name}}"> 
+                    {{events.user.name}}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>-->
+<main>
+    
+    <!-- PESQUISA -->
+    <section class="page-heading">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xs-12">
+                    <div class="wrapper-heading">
+                        <div class="title">
+                            <h1>Convites</h1>
+                        </div>
+                            
+                        <div class="action">
+                            <div class="view-mode">
+                                <a href="" class="view-mode-btn active">
+                                    <i class="fa fa-th-large"></i>
+                                </a>
+                                <a href="" class="view-mode-btn">
+                                    <i class="fa fa-th-list"></i>
+                                </a>
+                            </div>
+
+                            <form action="#" class="search-box">
+                                <input type="text" class="form-control" placeholder="Buscar...">
+                                <button class="btn btn-link"><i class="fa fa-search"></i></button>
+
+                                <div class="dropdown">
+                                    <a href="" class="btn btn-icon btn-default">
+                                        <i class="fa fa-search"></i>
+                                    </a>
+                                </div>
+                            </form>
+
+                                <a href="" class="btn btn-icon btn-calendar btn-default">
+                                    <i class="fa fa-calendar"></i>
+                                </a>
+
+                                <a href="" class="btn btn-action btn-primary">
+                                    <i class="fa fa-left fa-plus"></i>
+                                    Nova Proposta
+                                </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- STATUS -->
+    <section class="list-filters">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <ul class="vsh-filter">
+                        <form action="">
+                            <li class="filter-gray">
+                                <input name="filter_todos" id="filter_todos" type="checkbox" checked>
+                                <label for="filter_todos">
+                                    <div><i class="fa fa-globe"></i></div>
+                                    <span>Todos <strong>1877</strong></span>
+                                </label>
+                            </li>
+                                <li class="filter-purple">
+                                    <input name="filter_novos" id="filter_novos" type="checkbox" checked>
+                                    <label for="filter_novos">
+                                        <div><i class="fa fa-star" aria-hidden="true"></i></div>
+                                        <span>Novos <strong>185</strong></span>
+                                    </label>
+                                </li>
+                                <li class="filter-orange">
+                                    <input name="filter_enviados" id="filter_enviados" type="checkbox" checked>
+                                    <label for="filter_enviados">
+                                        <div><i class="fa fa-paper-plane" aria-hidden="true"></i></div>
+                                        <span>Enviados <strong>968</strong></span>
+                                    </label>
+                                </li>
+                                <li class="filter-blue">
+                                    <input name="filter_aceitos" id="filter_aceitos" type="checkbox" checked>
+                                    <label for="filter_aceitos">
+                                        <div><i class="fa fa-usd" aria-hidden="true"></i></div>
+                                        <span>Aceitos <strong>32</strong></span>
+                                    </label>
+                                </li>
+                                <li class="filter-green">
+                                    <input name="filter_confirmados" id="filter_confirmados" type="checkbox" checked>
+                                    <label for="filter_confirmados">
+                                        <div><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                                        <span>Confirmados <strong>122</strong></span>
+                                    </label>
+                                </li>
+                                <li class="filter-cyan">
+                                    <input name="filter_realizados" id="filter_realizados" type="checkbox" checked>
+                                    <label for="filter_realizados">
+                                        <div><i class="fa fa-check" aria-hidden="true"></i></div>
+                                        <span>Realizados <strong>259</strong></span>
+                                    </label>
+                                </li>
+                                <li class="filter-lighter">
+                                    <input name="filter_expirados" id="filter_expirados" type="checkbox" checked>
+                                    <label for="filter_expirados">
+                                        <div><i class="fa fa-hourglass-end" aria-hidden="true"></i></div>
+                                        <span>Expirados <strong>185</strong></span>
+                                    </label>
+                                </li>
+                                <li class="filter-red">
+                                    <input name="filter_cancelados" id="filter_cancelados" type="checkbox" checked>
+                                    <label for="filter_cancelados">
+                                        <div><i class="fa fa-times" aria-hidden="true"></i></div>
+                                        <span>Cancelados <strong>52</strong></span>
+                                    </label>
+                                </li>
+                        </form>
+                    </ul>
+
+                    <div class="vsh-filter-mobile">
+                        <select class="selectpicker" multiple>
+                            <option data-icon="filter-icon fa-globe" selected="">Todos</option>
+                            <option data-icon="filter-icon fa-star">Novos</option>
+                            <option data-icon="filter-icon fa-paper-plane">Enviados</option>
+                            <option data-icon="filter-icon fa-usd">Aceitos</option>
+                            <option data-icon="filter-icon fa-clock-o">Confirmados</option>
+                            <option data-icon="filter-icon fa-check">Realizados</option>
+                            <option data-icon="filter-icon fa-hourglass-end">Expirados</option>
+                            <option data-icon="filter-icon fa-times">Cancelados</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="list-events">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-4 col-sm-6">
+                    <article class="panel panel-purple">
+                        
+                        <div class="panel-heading">
+                            <div class="left">
+                                <h3 class="panel-title">Joe Caruso</h3>
+                                <ul class="vsh-stars">
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li class="active"><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul>
+                            </div>
+                            <div class="right">
+                                <span class="label">Novo</span>
+                            </div>
+                        </div>
+                        
+                        <div class="panel-middle">
+                            Convite recebido em: 18/07/2016 - 14:44
+                        </div>
+                        
+                        <div class="panel-body">
+                            <div class="left">
+                                <ul>
+                                    <li>
+                                        <div class="number-date">
+                                            <strong class="number">#456</strong>
+                                            <time class="date">18/07/2016</time>
+                                        </div>
+                                    </li>
+                                    <li class="title">
+                                        Título do Evento
+                                    </li>
+                                    <li class="local">
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i> Belo Horizonte/MG
+                                    </li>
+                                    <li>
+                                        <time class="time"><i class="fa fa-clock-o" aria-hidden="true"></i> 19h00</time>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="right">
+                                <time class="label label-default">
+                                    <span class="day">15</span>
+                                    <span class="month">SET</span>
+                                </time>
+                                <span class="year">2016</span>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <ul>
+                                <li><a class="btn btn-xs btn-link" href="" data-toggle="modal" data-target="#modal_view_event">Visualizar</a></li>
+                                <li><a class="btn btn-xs btn-link" href="">Proposta</a></li>
+                                <li><a class="btn btn-xs btn-link" href="">Cancelar</a></li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>

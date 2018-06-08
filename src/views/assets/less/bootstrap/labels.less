@@ -1,0 +1,85 @@
+// ------------------------------------------------------------------------------
+//
+//  # Bootstrap - Labels
+//
+//  Version: 3.3.7
+//  Homepage: http://getbootstrap.com/
+//  Latest update: 14 Ago, 2016
+//
+// ------------------------------------------------------------------------------
+
+
+.label {
+  display: inline;
+  padding: 5px 8px;
+  font-size: 70%;
+  font-weight: bold;
+  line-height: 1;
+  color: @label-color;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  text-transform: uppercase;
+  letter-spacing: @letter-spacing-medium;
+  border-radius: @border-radius-small;
+
+  // Add hover effects, but only for links
+  a& {
+    &:hover,
+    &:focus {
+      color: @label-link-hover-color;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  // Empty labels collapse automatically (not available in IE8)
+  &:empty {
+    display: none;
+  }
+
+  // Quick fix for labels in buttons
+  .btn & {
+    position: relative;
+    top: -1px;
+  }
+}
+
+// Colors
+// Contextual variations (linked labels get darker on :hover)
+
+.label-default, .label-white {
+  .label-variant(@label-default-bg);
+}
+
+.label-primary, .label-pink {
+  .label-variant(@label-primary-bg);
+}
+
+.label-success, .label-green {
+  .label-variant(@label-success-bg);
+}
+
+.label-info, .label-blue {
+  .label-variant(@label-info-bg);
+}
+
+.label-warning, .label-orange {
+  .label-variant(@label-warning-bg);
+}
+
+.label-danger, .label-red {
+  .label-variant(@label-danger-bg);
+}
+
+.label-purple {
+  .label-variant(@label-purple-bg);
+}
+
+.label-cyan {
+  .label-variant(@label-cyan-bg);
+}
+
+.label-gray {
+  .label-variant(@label-gray-bg);
+}

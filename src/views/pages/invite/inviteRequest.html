@@ -1,0 +1,54 @@
+<main class="no-logged">
+    
+    <section class="container">
+        <div class="row">
+
+            <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4">
+                <div class="box-action">
+                    <div class="box-heading text-center">
+                        <img src="views/dist/img/logo-simple.png" alt="Vai ser Show">
+                        <h2>
+                            Solicite seu convite para <br> 
+                            o vaiser show beta.
+                        </h2>
+                    </div>
+                    
+                     <div class="row">
+                        <div class="col-xs-12">
+                            <vsh-alerts alert="alert"></vsh-alerts>
+                        </div>
+                    </div>
+                    
+                    <form inputs-flow-up id="form_login" action="#">
+                        <div class="form-group flow-up">
+                            <label for="login_email">Nome</label>
+                            <input ng-model="inviteRequest.name" type="text" class="form-control" placeholder="">
+                        </div>
+                        <div class="form-group flow-up">
+                            <label for="login_password">Email</label>
+                            <input ng-model="inviteRequest.email" type="text" class="form-control" placeholder="" autofocus>
+                        </div>
+                        
+                        <spam ng-click="inviteRequest.requestInvite()"  class="btn btn-primary btn-block">Solicitar agora!</spam>
+                    </form>
+                    
+                    <div class="no-logged-footer">
+                        
+                        <hr>
+                        
+                        <p>
+                            Ao solicitar um convite, você afirma estar de acordo com <br>
+                            os <a href="">Termos de Uso</a> e <a href="">Privacidade</a> do VAI SER SHOW
+                        </p>
+                        
+                        <div class="divider"></div>
+                        
+                        <p>
+                            Já possui uma conta? Faça <a href="#/login">Login</a> agora
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

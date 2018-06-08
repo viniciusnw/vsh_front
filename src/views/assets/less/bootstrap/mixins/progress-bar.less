@@ -1,0 +1,19 @@
+// ------------------------------------------------------------------------------
+//
+//  # Bootstrap - Progress bars - Mixins
+//
+//  Version: 3.3.7
+//  Homepage: http://getbootstrap.com/
+//  Latest update: 15 Ago, 2016
+//
+// ------------------------------------------------------------------------------
+
+
+.progress-bar-variant(@color) {
+  background-color: @color;
+
+  // Deprecated parent class requirement as of v3.2.0
+  .progress-striped & {
+    #gradient > .striped();
+  }
+}

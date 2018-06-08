@@ -1,0 +1,162 @@
+.calendar{
+    
+    //dias da semana em cima do calendario
+    .fc-head-container{
+        border: none;
+        border-top: solid #c3c3c3 3px;
+        border-bottom: solid #c3c3c3 3px;
+    }
+    
+    .fc-day-header{
+        font-size: 12px;
+        padding: 25px 0;
+        text-transform: uppercase !important;
+        color: #000;
+        background-color: transparent;
+        border: none;
+    }
+    
+    //Borda dos dias
+    .fc-widget-content{
+        border: none;
+        tr{
+                
+            .fc-day{
+                border: solid 1px #c3c3c3;
+            }
+        }
+    }
+
+    
+    //altera o numero do dia
+    .fc-ltr{
+        
+        .fc-basic-view{
+            
+            .fc-day-number{
+                padding: 0;
+                    
+                .dias{
+                    float: right;
+                    width: 50px;
+                    background: transparent;
+                    text-align: center;
+                    padding: 4px 0;
+                    font-size: 25px;
+                    color: #000;
+                }
+                
+                .eventsPerDay{
+                    padding: 11px 0;
+                    text-align: center;
+                    font-size: 15px;
+                    color: #619AB7;
+                }
+            }
+            
+            .fc-today{
+                
+                .dias{
+                    background: #585663;
+                    color: #fff;
+                }
+            }
+        } 
+    }
+    
+    .fc{
+        margin-top: 50px;
+
+        .fc-toolbar{
+            
+            .fc-left,
+            .fc-right, 
+            .fc-center{    
+                .fc-button-group, 
+                button{
+                    
+                    background: transparent;
+                    border: none;
+                    border-radius: 0;
+                    padding: 0 1.6em;
+                    box-shadow: none;
+                    
+                    display: block !important;
+                } 
+                button.fc-state-active{
+                    
+                    background: transparent;
+                    border: none;
+                    background: #000;
+                    color: #fff;
+                }
+            }
+        }
+        
+        .fc-view-container{
+            .fc-body{
+                td{
+                    a{
+                        cursor: pointer;
+                    }
+                }
+                
+                .fc-event-container{
+                    
+                    a.fc-day-grid-event{
+                        margin: 3px 5px;
+                        border-radius: 10px;
+                        
+                        .fc-content{
+                            padding-left: 5px;
+                        }
+                    }
+                    
+                    .event-SENDED{
+                        background: #dac260 !important;
+                        border-color: #dac260 !important;
+                    }
+                    
+                    .event-APROVED{
+                        background: #5388d1 !important;
+                        border-color: #5388d1 !important; 
+                    }
+                    
+                    .event-CONTRACTED{
+                        background: #51a565 !important;
+                        border-color: #51a565 !important; 
+                    }
+                    
+                    .event-REALIZED{
+                        background: #8a4cc9 !important;
+                        border-color: #8a4cc9 !important; 
+                    }
+                    
+                    .fc-day-grid-event{
+                                            
+                        color: white !important;
+                        border-radius: 0;
+                        margin: 0;
+                        transition: all 100ms;
+                        
+                        &:hover{
+                            background: #DDEFF9   !important;
+                            border-color: #DDEFF9 !important;
+                            color: #585663 !important;
+                        }
+                        
+                        .fc-content{
+                            
+                            padding: 2px;
+
+                            .fc-title{
+
+                                font-family: Gotham-Light;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

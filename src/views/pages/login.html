@@ -1,0 +1,67 @@
+<main class="no-logged">
+    
+    <section class="container">
+        <div class="row">
+
+            <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4">
+                <div class="box-action">
+                    <div class="box-heading text-center">
+                        <img src="views/dist/img/logo-simple.png" alt="Vai ser Show">
+                        <h2>Acessar o vai ser show.</h2>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <vsh-alerts alert="alert"></vsh-alerts>
+                        </div>
+                    </div>
+                    
+                    <form inputs-flow-up id="form_login" ng-submit="login.login()" >
+                        <div class="form-group flow-up">
+                            <label for="login_email">E-mail</label>
+                            <input ng-model="login.email" type="email" class="form-control" id="login_email" placeholder="" autocomplete="off">
+                        </div>
+                        
+                        <div class="form-group flow-up">
+                            <label for="login_password">Senha</label>
+                            <input ng-model="login.password" type="password" class="form-control" id="login_password" placeholder="" autocomplete="off">
+                        </div>
+                        
+                        <div class="remember">
+                            <div class="row">
+
+                                <div class="col-xs-6">
+                                    <div class="checkbox checkbox-primary">
+                                        <input ng-model="login.keepLogged" class="form-control" type="checkbox" id="checkbox_default">
+
+                                        <label for="checkbox_default">
+                                            <span>Lembrar-me</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-6 text-right">
+                                    <div class="forgot-pass">
+                                        <a href="#/recuperar-senha">Recuperar Senha</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+                    </form>
+                    
+                    <div class="no-logged-footer">
+                        
+                        <hr>
+                        
+                        <p>
+                            Ainda não possui uma conta? <a href="#/convite">Solicite</a> agora seu convite <br>
+                            para participar do VAI SER SHOW Beta.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

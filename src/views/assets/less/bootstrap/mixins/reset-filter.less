@@ -1,0 +1,19 @@
+// ------------------------------------------------------------------------------
+//
+//  # Bootstrap - Reset Filters - Mixins
+//
+//  Version: 3.3.7
+//  Homepage: http://getbootstrap.com/
+//  Latest update: 14 Ago, 2016
+//
+// ------------------------------------------------------------------------------
+
+
+// Reset filters for IE
+//
+// When you need to remove a gradient background, do not forget to use this to reset
+// the IE filter for IE9 and below.
+
+.reset-filter() {
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
+}

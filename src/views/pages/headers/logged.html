@@ -1,0 +1,93 @@
+<header>
+    <nav class="navbar navbar-default" ng-controller="Logged as logged">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="navbar-wrapper">
+
+                        <div class="hamburger">
+                            <button id="btn-link-left" class="btn-link" push-menu data-open="0" data-class-menu="navbar-left">
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                            </button>
+                            <a href="" class="brand flexbox flexbox-align-center flexbox-center">
+                                <img src="views/dist/img/logo-simple.png" alt="Vai ser Show">
+                            </a>
+                            <ul class="navbar-nav navbar-left">
+                                <img src="views/dist/img/logo-simple.png" class="visible-xs visible-sm" alt="Vai ser Show">
+                                <li><span class="label label-info">Beta</span></li>
+                                <li><a href="#/dashboard">Dashboard</a></li>
+                                <li><a href="#/calendario" data-toggle="modal" data-target="#modal_calendar">Agenda</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="account-dropdown dropdown">
+                            <div class="account-button dropdown-toggle" data-toggle="dropdown">
+                                <img src="{{ logged.avatar }}" class="img-circle" alt="{{ logged.name }}">
+                                <strong>{{ logged.name }}</strong>
+                                <i class="fa fa-caret-down"></i>
+                            </div>
+
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                    <div class="account-resume">
+                                        <img src="{{ logged.avatar }}" alt="{{ logged.name }}">
+                                        <span class="name">{{ logged.name }}</span>
+                                        <span class="email">{{ logged.email }}</span>
+                                        <span class="label label-info">Beta</span>
+                                    </div>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="" data-toggle="modal" data-target="#modal-account">Meus dados</a></li>
+                                <li><a href=""  data-toggle="modal" data-target="#modal-account">Alterar senha</a></li>
+                                <li><a href="">Sair</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="flexbox flexbox-align-center flexbox-space">
+
+                        <div class="company">
+                            <div class="title">
+                                <span class="company-name">Quartel Design</span>
+                                <a href="" class="dropdown-toggle">Configurações</a>
+                            </div>
+                            <div class="company-dropdown dropdown">
+                                <a href="" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-caret-down"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href=""><span>Diante do Trono</span><span class="label label-default">588</span></a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href=""><span>Fonte da Vida</span><span class="label label-default">49</span></a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href=""><span>Cristo Vivo</span><span class="label label-default">2077</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <ul class="navbar-nav navbar-right">
+                            <img src="views/dist/img/logo-simple.png" class="visible-xs visible-sm" alt="Vai ser Show">
+                            <li class="active"><a href="">Convites</a></li>
+                            <li><a href="">Clientes</a></li>
+                            <li><a href="">Equipe</a></li>
+                            <li><a href="">Relatórios</a></li>
+                            <li><button class="btn btn-sm btn-purple">Minha página</button></li>
+                        </ul>
+
+                        <div class="hamburger">
+                            <button id="btn-link-right" class="btn-link" push-menu data-open="0" data-class-menu="navbar-right">
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

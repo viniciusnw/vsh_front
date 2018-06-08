@@ -1,0 +1,53 @@
+// ------------------------------------------------------------------------------
+//
+//  # Pages - Shortcodes
+//
+//  Version: 1.0
+//  Homepage: *
+//  Latest update: 14 Ago, 2016
+//
+// ------------------------------------------------------------------------------
+
+
+body {
+	&.shortcodes {
+
+		section {
+			margin-top: 80px;
+			margin-bottom: 80px;
+		}
+
+		// color boxes
+		.color-box {
+			background-color: #fff;
+			padding: 10px;
+			border-radius: @border-radius-base;
+			margin-bottom: 30px;
+			.bg-color {
+				display: block;
+				height: 90px;
+				border-radius: @border-radius-base;
+			}
+			.color-name {
+				font-weight: 700;
+				color: @gray-light;
+				text-transform: uppercase;
+				display: block;
+				margin-top: 12px;
+			}
+			> .hex {
+				font-size: 12px;
+				font-weight: 700;
+				text-transform: uppercase;
+				display: block;
+				margin: 4px 0 0;
+			}
+		}
+
+		.typography {
+			h1, h2, h3, h4, h5, h6 {
+				margin: 0;
+			}
+		}
+	}
+}

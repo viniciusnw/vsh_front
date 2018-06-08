@@ -1,0 +1,24 @@
+// ------------------------------------------------------------------------------
+//
+//  # Bootstrap - Responsive utilities - Mixins
+//
+//  Version: 3.3.7
+//  Homepage: http://getbootstrap.com/
+//  Latest update: 14 Ago, 2016
+//
+// ------------------------------------------------------------------------------
+
+ 
+//
+// More easily include all the states for responsive-utilities.less.
+.responsive-visibility() {
+  display: block !important;
+  table&  { display: table !important; }
+  tr&     { display: table-row !important; }
+  th&,
+  td&     { display: table-cell !important; }
+}
+
+.responsive-invisibility() {
+  display: none !important;
+}

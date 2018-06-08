@@ -1,0 +1,101 @@
+// ------------------------------------------------------------------------------
+//
+//  # Core - Advanced Applications
+//
+//  Version: 1.0
+//  Homepage: *
+//  Latest update: 09 Ago, 2016
+//
+// ------------------------------------------------------------------------------
+
+
+//== Advanced Cross-Browser
+//
+//##
+
+// Mac OS - Firefox
+@supports (-moz-osx-font-smoothing:auto) {
+
+  // Labels
+  .label {
+    padding: 6px 8px 4px;
+  }
+
+  // buttons
+  .btn    { padding: 14px 24px; }
+  .btn-lg { padding: 16px 32px; }
+  .btn-sm { padding: 12px 20px; }
+  .btn-xs { padding:  9px 16px; }
+
+  .btn .badge { margin-top: -2px; }
+  .badge { padding: 5px 6px 3px; }
+
+  //forms
+  .form-control { padding: 14px 15px 13px; }
+  .input-sm { padding: 13px 15px 11px; }
+  .bootstrap-select > .dropdown-toggle { padding: 14px 41px 14px 15px; }
+  
+  //.checkbox label::before, .radio label::before { margin-top: -4px; }
+  .checkbox label::before, .radio label::before { margin-top: 0; }
+  .checkbox label::after, .radio label::after { margin-top: 4px }
+  
+  .checkbox.sm label::before { margin-top: -2px; }
+  .checkbox.lg label::before { margin-top: -5px; }
+  .radio.sm label::before { margin-top: -1px; }
+  .radio.lg label::before { margin-top: -6px; }
+
+  // navbar 
+  .navbar .company .dropdown-menu {
+    top: 79px;
+  }
+}
+
+// Mac OS - Chrome and Safari
+@media screen and (-webkit-max-device-pixel-ratio:1) and (min-color-index:0) {
+
+  // Labels
+  // Labels
+  .label {
+    padding: 6px 8px 4px;
+  }
+
+  // buttons
+  .btn    { padding: 14px 24px; }
+  .btn-lg { padding: 16px 32px; }
+  .btn-sm { padding: 12px 20px; }
+  .btn-xs { padding:  9px 16px; }
+
+  .btn .badge { margin-top: -2px; }
+  .badge { padding: 5px 6px 3px; }
+
+  //forms
+  .form-control { padding: 14px 15px 13px; }
+  .input-sm { padding: 13px 15px 11px; }
+  .bootstrap-select > .dropdown-toggle { padding: 14px 41px 14px 15px; }
+  
+  //.checkbox label::before, .radio label::before { margin-top: -4px; }
+  .checkbox label::before, .radio label::before { margin-top: 0; }
+  .checkbox label::after, .radio label::after { margin-top: 4px; }
+  
+  .checkbox.sm label::before { margin-top: -2px; }
+  .checkbox.lg label::before { margin-top: -7px; }
+  .radio.sm label::before { margin-top: -1px; }
+  .radio.lg label::before { margin-top: -6px; }
+
+  // navbar 
+  .navbar .company .dropdown-menu {
+    top: 79px;
+  }
+
+}
+
+
+// Detect Chrome 22+ (and Safari 6.1+)
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm), screen and(-webkit-min-device-pixel-ratio:0) {
+	.navbar .account-dropdown .dropdown-menu {
+		top: 72px;
+	}
+	.navbar .company .dropdown-menu {
+		top: 79px;
+	}
+}

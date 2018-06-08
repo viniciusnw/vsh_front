@@ -1,0 +1,49 @@
+// ------------------------------------------------------------------------------
+//
+//  # Core - Events
+//
+//  Version: 1.0
+//  Homepage: *
+//  Latest update: 15 Ago, 2016
+//
+// ------------------------------------------------------------------------------
+
+
+.page-event {
+	h4 { margin-bottom: 30px; }
+
+	.list-data {
+		.list-unstyled;
+
+		li {
+			margin: 5px 0;
+		}
+	}
+
+	hr { margin: 30px 0; }
+
+	.timeline {
+		margin: 40px 0;
+	}
+
+	.page-action { 
+		text-align: center;
+		padding-top: 40px;
+		padding-bottom: 80px;
+	}
+
+	@media (max-width: @screen-xs) {
+		h4 {
+			margin-top: (@line-height-computed / 2) * 5;
+		}
+
+		.timeline { display: none; } // change later
+
+		.page-action {
+			.btn { margin-bottom: 10px; }
+			.btn:last-child { margin-bottom: 0; }
+		}
+	}
+
+}
+

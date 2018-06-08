@@ -1,0 +1,330 @@
+// ------------------------------------------------------------------------------
+//
+//  # Core - Navbar
+//
+//  Version: 1.0
+//  Homepage: *
+//  Latest update: 15 Ago, 2016
+//
+// ------------------------------------------------------------------------------
+
+body{
+    overflow-x: hidden;
+}
+
+// Navbar
+.navbar {
+
+	@media (max-width: @screen-md) {
+		.col-xs-12 { position: static; }
+	}
+
+	// brand
+	.brand {
+		height: @navbar-height-default;
+		width: @navbar-width-default;
+		background-color: @brand-dark;
+
+		img { width: 45px; }
+
+		@media (min-width: @screen-md) {
+			margin-right: 60px;
+		}
+		@media (max-width: @screen-md) {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			margin-left: -60px;
+		}
+	}
+
+	// hamburger
+	.hamburger {
+		.flexbox;
+		.flexbox-align-center;
+
+		button { font-size: 26px; }
+	}
+
+	// naviation
+	.navbar-nav {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		li { display: inline-block; }
+
+		li > a {
+			color: #fff;
+			font-size: @font-size-small;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: @letter-spacing-large;
+			transition: all .1s ease-in-out;
+
+			&:hover, &:focus {
+				color: @color-pink;
+				transition: all .1s ease-in-out;
+			}
+		}
+
+		@media (min-width: @screen-md) {
+			&.navbar-left li {
+				margin-right: 32px;
+				.btn { margin-right: 20px; }
+			}
+			&.navbar-right li {
+				margin-left: 32px;
+				.btn { margin-left: 20px; }
+			}
+
+		}
+
+		@media (max-width: @screen-md) {
+			position: absolute;
+			top: 0;
+			z-index: 1000;
+			width: 290px;
+			height: 100vh;
+			background-color: @color-purple;
+			padding: 28px 34px;
+
+			img {
+				width: 45px;
+				margin: 0 0 36px;
+			}
+
+			li {
+				display: block;
+				margin-bottom: 24px;
+			}
+
+			.btn {
+				margin-top: 12px;
+				.btn-gray;
+			}
+
+			&.navbar-left { 
+                                -webkit-transition: left 0.8s;
+                                -moz-transition: left 0.8s;
+                                transition: left 0.8s;
+				
+                                left: -290px;
+				&.active { left: 0; }
+			}
+			&.navbar-right { 
+                                -webkit-transition: right 0.8s;
+                                -moz-transition: right 0.8s;
+                                transition: right 0.8s;
+                                
+				right: -290px; 
+				&.active { right: 0; }
+			}
+			&.active {
+				display: block;
+			}
+		}
+	}
+
+	// account
+	.account-dropdown {
+		.flexbox;
+		.flexbox-end;
+
+		@media (max-width: @screen-xs) {
+			position: static !important;
+
+		}
+
+		.account-button {
+			color: #fff;
+			img {
+				width: 50px;
+				width: 50px;
+				border: 2px solid @brand-gray;
+				transition: all .8s ease-in-out;
+			}
+			strong {
+				font-weight: 600;
+				font-size: @font-size-base;
+				padding-left: 15px;
+			}
+			.fa { padding-left: 10px; }
+			strong, .fa, &:hover { transition: all .1s ease-in-out; }
+			&:hover {
+				cursor: pointer;
+				color: @color-pink;
+
+				img { 
+					border: 2px solid #fff; 
+					transition: all .2s ease-in-out;
+				}
+			}
+
+			@media (max-width: @screen-md) {
+				strong, .fa {
+					display: none;
+				}
+			}
+		}
+
+		.dropdown-menu {
+			top: 73px;
+			border-radius: 0 0 @border-radius-base @border-radius-base;
+			min-width: 360px;
+
+			@media (max-width: @screen-xs) {
+				top: 98px;
+				border-radius: 0;
+				min-width: 100%;
+			}
+		}
+
+		.account-resume {
+			margin: 6px 0 30px;
+			img {
+				display: block;
+				float: left;
+				width: 86px;
+				border-radius: @border-radius-base;
+				margin: 0 16px;
+			}
+			.name {
+				color: #fff;
+				font-size: 18px;
+				text-transform: none;
+				font-weight: 700;
+				display: block;
+				margin-bottom: 2px;
+			}
+			.email {
+				color: #ddd;
+				font-size: 12px;
+				font-weight: 600;
+				display: block;
+				margin-bottom: 14px;
+			}
+			.label {
+				font-size: @font-size-small - 2px;
+			}
+		}
+	}
+	
+
+	// company
+	.company {
+		position: relative;
+
+		@media (max-width: @screen-xs) {
+			position: static;
+		}
+
+		.title {
+			.company-name {
+				color: #fff;
+				font-size: @font-size-large;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: @letter-spacing-large;
+				display: block;
+				padding-bottom: 4px;
+			}
+			a {
+				color: darken(#fff, 20%);
+				&:hover, &:focus {
+					color: @color-pink;
+				}
+			}
+		}
+		.company-dropdown {
+			position: static;
+			display: block;
+			float: right;
+			margin-top: -48px;
+			margin-right: -60px;
+			width: 28px;
+			height: 28px;
+			border: 1px solid #fff;
+			border-radius: @border-radius-max;
+			transition: all .1s ease-in-out;
+			> a {
+				color: #fff;
+				width: 26px;
+				height: 26px;
+				.flexbox;
+				.flexbox-align-center;
+				.flexbox-center;
+			}
+			&:hover, &:focus {
+				border: 1px solid @color-pink;
+				transition: all .1s ease-in-out;
+				> a {  color: @color-pink; }
+			}
+		}
+
+		.dropdown-menu {
+			top: 80px;
+			min-width: 290px;
+			border-radius: 0 0 @border-radius-base @border-radius-base;
+
+			@media (max-width: @screen-xs) {
+				top: 212px;
+				min-width: 100%;
+				border-radius: 0;
+			}
+			
+			li > a {
+				.flexbox;
+				.flexbox-align-center;
+				.flexbox-space;
+			}
+			.label {
+				.flexbox;
+				.flexbox-end;
+				font-size: @font-size-small - 2;
+			}
+		}	
+	}
+
+	.page-action {
+		@media (min-width: @screen-md) {
+			padding-left: 20px;
+		}
+	}
+
+}
+
+
+// Navbar default
+.navbar-default {
+	background-color: @brand-gray;
+
+	.navbar-wrapper {
+		.flexbox;
+		.flexbox-align-center;
+		.flexbox-space;
+		height: @navbar-height-default;
+	}
+
+	.hamburger {
+		button { color: #fff; }
+
+		@media (min-width: @screen-md) {
+			button { display: none; }
+		}
+	}
+}
+
+// Navbar primary
+.navbar-primary {
+	background-color: @brand-dark;
+	padding: 32px 0;
+
+	.hamburger  {
+		button { color: @color-pink; }
+
+		@media (min-width: @screen-md) {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,194 @@
+// ------------------------------------------------------------------------------
+//
+//  # Core - Filters
+//
+//  Version: 1.0
+//  Homepage: *
+//  Latest update: 15 Ago, 2016
+//
+// ------------------------------------------------------------------------------
+
+
+.list-filters {
+	margin-bottom: 40px;
+}
+
+.filter(@filter-color) {
+
+	@media (max-width: @screen-sm) {
+		display: none;
+	}
+
+	@color-base: @gray-medium;
+
+	// Valores padrão
+	label { color:        @color-base; }
+	i     { border-color: @color-base; }
+
+	// Quando o input tiver checked
+	input:checked + label {
+
+		// Cor das fontes
+		color: @filter-color;
+		
+		// Cor da borda
+		i {
+			border-color: @filter-color;
+		}
+	}
+}
+
+// Filtro
+.vsh-filter {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+
+	form {
+		.flexbox;
+		.flexbox-space;
+		.flexbox-align-center;
+		//.flexbox-center;
+
+		width: 100%;
+	}
+
+	input[type="checkbox"] {
+		visibility: hidden;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	label {
+		.flexbox;
+		.flexbox-space;
+		.flexbox-align-center;
+
+		font-weight: 400;
+		cursor: pointer;
+		position: relative;
+		transition: color .2s ease-in-out;
+
+		@media (max-width: 991px) {
+			.flexbox-wrap;
+			.flexbox-center;
+		}
+	}
+
+	li {
+		// Todos
+		&.filter-lighter { .filter(@gray-light); }
+
+		// Novos
+		&.filter-purple  { .filter(@color-purple); }
+
+		// Enviados
+		&.filter-orange  { .filter(@color-orange); }
+
+		// Aceitos
+		&.filter-blue    { .filter(@color-blue); }
+
+		// Confirmado
+		&.filter-green   { .filter(@color-green); }
+
+		// Realizado
+		&.filter-cyan    { .filter(@color-cyan); }
+
+		// Expirado
+		&.filter-gray    { .filter(@brand-gray); }
+
+		// Cancelado
+		&.filter-red     { .filter(@color-red); }
+	}
+
+	i {
+		.flexbox;
+		.flexbox-center;
+		.flexbox-align-center;
+
+		border-width: 3px;
+		border-style: solid;
+		height: 48px;
+		width: 48px;
+		border-radius: 50px;
+		transition: all .2s ease-in-out;
+
+		&:before {
+			font-size: 17px;
+			transition: all .2s ease-in-out;
+		}
+	}
+
+	div {
+		margin-right: 10px;
+		width: 48px;
+
+		@media (min-width: 992px) and (max-width: 1199px) {
+			i {
+				height: 40px;
+				width: 40px;
+
+				&:before { font-size: 13px; }
+			}
+		}
+
+		@media (max-width: 991px) {
+			margin-right: 0px;
+			margin-bottom: 5px;
+		}
+	}
+
+	span {
+		.flexbox;
+		.flexbox-grow;
+		.flexbox-wrap;
+
+		font-size: 12px;
+		font-style: italic;
+
+		@media (max-width: 991px) {
+			display: block;
+			text-align: center;
+			width: 100%;
+		}
+
+		strong {
+			display: block;
+			font-size: 18px;
+			width: 100%;
+		}
+	}
+}
+
+// Mobile Select
+.vsh-filter-mobile {
+	.dropdown-menu {
+		li {
+
+			> a {
+				.flexbox;
+				//.flexbox-align-center;
+				//.flexbox-space;
+				padding: 10px 16px;
+
+				.filter-icon {
+					font-size: 16px;
+					width: 22px;
+					text-align: center;
+					margin-right: 8px;
+				}
+
+				.fa-paper-plane { font-size: 14px; }
+
+				.check-mark { margin-top: 0px !important; }
+			}
+		}
+	}
+
+	@media (min-width: @screen-sm) {
+		display: none;
+	}
+}

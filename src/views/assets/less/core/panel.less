@@ -1,0 +1,47 @@
+// ------------------------------------------------------------------------------
+//
+//  # Core - Events Panel
+//
+//  Version: 1.0
+//  Homepage: *
+//  Latest update: 15 Ago, 2016
+//
+// ------------------------------------------------------------------------------
+
+
+.vsh-stars {
+	padding: 0px;
+	margin: 5px 0px;
+	list-style: none;
+
+	li {
+		display: inline-block;
+	}
+
+	i {
+		color: @panel-stars-color;
+	}
+
+	.active i {
+		color: @panel-stars-hover;
+	}
+}
+
+.panel-color(@color) {
+	border-top-color: @color;
+
+	.label,
+	.panel-footer a:hover {
+		background-color: @color !important;
+	}
+	.panel-footer a {
+		height: @height-base + 2;
+		&[disabled] {
+		    &:hover,
+		    &:focus {
+		    	color: @gray;
+		    	background-color: transparent !important;
+		    }
+		}
+	}
+}

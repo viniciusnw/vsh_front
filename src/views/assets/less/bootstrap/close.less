@@ -1,0 +1,58 @@
+// ------------------------------------------------------------------------------
+//
+//  # Bootstrap - Close
+//
+//  Version: 3.3.7
+//  Homepage: http://getbootstrap.com/
+//  Latest update: 14 Ago, 2016
+//
+// ------------------------------------------------------------------------------
+
+
+.close {
+  float: right;
+  font-size: (@font-size-base * 1.2);
+  font-weight: @close-font-weight;
+  line-height: 1;
+  color: @close-color;
+  //text-shadow: @close-text-shadow;
+  .opacity(.2);
+
+  &:hover,
+  &:focus {
+    color: @close-color;
+    text-decoration: none;
+    cursor: pointer;
+    .opacity(.5);
+  }
+
+  // Additional properties for button version
+  // iOS requires the button element instead of an anchor tag.
+  // If you want the anchor version, it requires `href="#"`.
+  // See https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
+  button& {
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+  }
+
+  &.close-modal {
+    font-size: @close-modal-size / 2;
+    width: @close-modal-size;
+    height: @close-modal-size;
+    border: 2px solid lighten(@brand-gray, 20%);
+    color: lighten(@brand-gray, 20%);
+    text-align: center;
+    opacity: 1;
+    border-radius: @border-radius-max;
+    .simple-transition;
+
+    &:hover, &:focus {
+      color: @brand-gray;
+      border: 2px solid @brand-gray;
+      .simple-transition;
+    }
+  }
+}

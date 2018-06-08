@@ -1,0 +1,92 @@
+// ------------------------------------------------------------------------------
+//
+//  # Core - Circle Button
+//
+//  Version: 1.0
+//  Homepage: *
+//  Latest update: 28 Jul, 2016
+//
+// ------------------------------------------------------------------------------
+
+
+.btn-circle {
+	.flexbox;
+	.flexbox-align-center;
+	.flexbox-center;
+	width: @height-base;
+	height: @height-base;
+	border-size: @border-radius-base;
+	border-style: solid;
+	border-radius: @border-radius-max;
+
+	.circle-icon { text-align: center; }
+}
+
+
+//
+// Circle Sizes
+
+.circle-size(@width; @height; @font-size; @border-size) {
+	width: @width;
+	height: @height;
+	font-size: @font-size;
+	border-width: @border-size;
+}
+
+.btn-circle {
+	.circle-size(@height-base; @height-base; @font-size-base; @border-radius-base);
+}
+
+.circle-lg {
+	.circle-size(@height-lg; @height-lg; @font-size-large; (@border-radius-base + 1));
+}
+
+.circle-sm {
+	.circle-size(@height-sm; @height-sm; @font-size-small; @border-radius-base);
+}
+
+.circle-xs {
+	.circle-size(@height-xs; @height-xs; @font-size-tiny; @border-radius-base);
+}
+
+
+//
+// Circle Styles
+
+.circle-variant(@border; @icon-color) {
+	border-color: @border;
+	color: @icon-color;
+}
+.circle-default {
+	.circle-variant(@gray-lighting; @gray-lighting);
+}
+.circle-primary {
+	.circle-variant(@brand-primary; @brand-primary);
+}
+.circle-success, .circle-green {
+	.circle-variant(@color-green; @color-green);
+}
+.circle-danger, .circle-red {
+	.circle-variant(@color-red; @color-red);
+}
+.circle-warning, .circle-orange {
+	.circle-variant(@color-orange; @color-orange);
+}
+.circle-purple {
+	.circle-variant(@color-purple; @color-purple);
+}
+.circle-pink {
+	.circle-variant(@color-pink; @color-pink);
+}
+.circle-cyan {
+	.circle-variant(@color-cyan; @color-cyan);
+}
+.circle-blue, .circle-info {
+	.circle-variant(@color-blue; @color-blue);
+}
+.circle-gray {
+	.circle-variant(@brand-gray; @brand-gray);
+}
+.circle-off {
+	.circle-variant(@gray-light; @gray-light);
+}

@@ -1,0 +1,27 @@
+{
+  "name": "views",
+  "authors": [
+    "Wesley Almeida <wesley@quarteldesign.com>"
+  ],
+  "description": "frontend vsh application",
+  "main": "index.js",
+  "keywords": [
+    "vsh"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "font-awesome": "^4.6.3",
+    "bootstrap-select": "silviomoreto/bootstrap-select#^1.10.0",
+    "jquery.steps": "rstaib/jquery-steps#^1.1.0"
+  }
+}

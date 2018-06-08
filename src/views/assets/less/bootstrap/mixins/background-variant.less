@@ -1,0 +1,18 @@
+// ------------------------------------------------------------------------------
+//
+//  # Bootstrap - Contextual backgrounds
+//
+//  Version: 3.3.7
+//  Homepage: http://getbootstrap.com/
+//  Latest update: 14 Ago, 2016
+//
+// ------------------------------------------------------------------------------
+
+
+.bg-variant(@color) {
+  background-color: @color;
+  a&:hover,
+  a&:focus {
+    background-color: darken(@color, 10%);
+  }
+}

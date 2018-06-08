@@ -1,0 +1,137 @@
+// ------------------------------------------------------------------------------
+//
+//  # Core - Page Heading
+//
+//  Version: 1.0
+//  Homepage: *
+//  Latest update: 15 Ago, 2016
+//
+// ------------------------------------------------------------------------------
+
+
+.page-heading {
+	margin-bottom: 40px;
+
+	.wrapper-heading {
+		.flexbox;
+		.flexbox-space;
+		.flexbox-align-center;
+
+		.title h1 { margin: 6px 0 0 0; }
+
+		.action {
+			.flexbox;
+			.flexbox-align-center;
+
+			.view-mode {
+				.flexbox;
+				.flexbox-space;
+				.flexbox-align-center;
+				height: @height-base;
+				margin-right: 22px;
+
+				.view-mode-btn {
+					color: @gray-light;
+					margin: 5px 4px 0;
+
+					.fa {
+						font-size: 26px;
+					}
+
+					&:hover {
+						color: lighten(@brand-gray, 15%);
+					}
+
+					&.active,
+					&.active:hover {
+						color: @brand-dark;
+					}
+				}
+			}
+
+			.search-box {
+				position: relative;
+				margin-right: 10px;
+
+				.dropdown {
+					display: block;
+				}
+
+				.btn-link {
+					padding: 2px;
+					color: @gray-light;
+					position: absolute;
+					top: 1px;
+					right: 10px;
+					font-size: 14px;
+					&:hover, &:focus {
+						color: @brand-gray;
+					}
+				}				
+			}
+
+			.btn-calendar {
+				margin-right: 30px;
+			}
+		}
+	}
+}
+
+@media (min-width: @screen-md) {
+	.page-heading {
+		.wrapper-heading {
+			.title {}
+
+			.action {
+				.search-box {
+					min-width: 320px;
+
+					.dropdown {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: @screen-md) {
+	.page-heading {
+		.wrapper-heading {			
+			.action {
+				.view-mode { display: none; }
+
+				.search-box {
+					> .form-control, > .btn { display: none; }
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: @screen-sm) {	
+	.page-heading {
+		.wrapper-heading {
+			.flexbox-center;
+			.flexbox-wrap;
+
+			.title {
+				width: 100%;
+				text-align: center;
+				padding-bottom: 16px;
+			}
+		}
+	}
+}
+
+@media (max-width: @screen-xs) {
+	.page-heading {
+		.wrapper-heading {
+			.action {
+				.btn-calendar {
+					display: none;
+				}
+			}
+		}
+	}
+}

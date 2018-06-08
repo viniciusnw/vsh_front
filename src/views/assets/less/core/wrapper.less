@@ -1,0 +1,114 @@
+// ------------------------------------------------------------------------------
+//
+//  # Core - Wrapper
+//
+//  Version: 1.0
+//  Homepage: *
+//  Latest update: 29 Jul, 2016
+//
+// ------------------------------------------------------------------------------
+
+
+// Header
+header {
+	margin-bottom: 50px;
+
+	@media (max-width: @screen-xs) {
+		margin-bottom: 40px;
+	}
+}
+
+// Events Listing
+.list-events {
+	.panel {
+		margin: 0 0 30px;
+	}
+}
+
+.wrapper {
+	.no-logged {
+
+		height: 100vh;
+		background-color: @brand-gray;
+
+		.box-action {
+			padding: 25px;
+
+			.box-heading {
+				padding-bottom: 46px;
+				img { margin: 0 0 50px; }
+				h2 { 
+					margin: 0;
+					font-size: @font-size-h4;
+					color: @body-bg;
+				}
+				p { 
+					margin: 20px 0 0;
+					color: @body-bg;
+					font-size: @font-size-small;
+				}
+			}
+
+			.form-group {
+				label {
+					color: @gray-lighter;
+				}
+				.form-control {
+					margin-bottom: 20px;
+					background-color: @brand-gray;
+					border: 2px solid @brand-dark;
+					color: #fff;
+
+					&:focus {
+						border: 2px solid @gray-darker;
+					}
+				}
+			}
+
+			.checkbox {
+				margin: 0;
+			}	
+		}
+	}
+}
+
+footer {
+	background-color: @brand-dark;
+	padding: 22px 0;
+	margin-top: 40px;
+	font-size: @font-size-small;
+
+	a { color: #ddd;
+		&:hover, &:focus { color: @color-pink; }
+	}
+
+	.footer-wrapper {
+		.flexbox;
+		.flexbox-space;
+		.flexbox-align-center;
+	}
+
+	p {
+		margin: 6px 0;
+		color: #aaa;
+	}
+
+	ul {
+		.list-inline;
+		margin: 6px 0;
+		padding: 0;
+
+		li { padding: 0 0 0 20px; }
+	}
+
+	@media (max-width: @screen-xs) {
+		.footer-wrapper {
+			.flexbox-wrap;
+			.flexbox-center;
+
+			p { margin: 6px 20px; }
+
+			ul > li { padding: 0 10px; }
+		}
+	}
+}
